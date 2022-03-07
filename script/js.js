@@ -46,6 +46,14 @@ let employeesArr=[
 ];
 // testObj.name
 
+
+// for (let i = 0; i < employeesArr.length; i++) {
+//     let employeesArrItem = employeesArr[i];
+    
+//     console.log(employeesArrItem.name);
+//     console.log(employeesArrItem.profession);
+//     console.log(employeesArrItem.img).innerHTML;
+//   }
 // console.log(testObj[3].name)
 // for(i=0; i<employeesArr.length; i++){
 //     console.log (employeesArr[i].name)
@@ -67,13 +75,20 @@ let teamContainer = document.querySelector('.team-container');/*SELEZIONE TEAM-C
 let teamContainerDiv = document.createElement('div');/*DIV TEAM-CONTAINER */
 let teamCardDiv = document.createElement('div');/*DIV TEAMCARD */
 let cardImgDiv = document.createElement('div');/*DIV CARD IMG */
-let imgJs = employeesArr[i].img.innerHTML;  /*document.createElement('img'); /*IMG ELEMENT*/
-// imgJs.src =  employeesArr[i].img/*'img/wayne-barnett-founder-ceo.jpg'*/;
+
+// imgJs.src = employeesArr[i].img;
+
+// employeesArr[i].img;/* = (employeesArr[i].img).innerHTML;*/
+  /*document.createElement('img'); /*IMG ELEMENT*/
+// imgJs =  employeesArr[i].img/*'img/wayne-barnett-founder-ceo.jpg'*/;
 let cardTextDiv = document.createElement('div');
 let h3Js = document.createElement('h3');
+h3Js.innerHTML = employeesArr[i].name;
 let pJs = document.createElement('p');
-pJs.innerHTML= 'profession';
-h3Js.innerHTML= 'name';
+pJs.innerHTML= employeesArr[i].profession;
+let imgJs = document.createElement('img');
+imgJs.innerHTML = employeesArr[i].img;
+// h3Js.innerHTML= 'name';
 
 teamContainerDiv.classList.add('team-container'); /*ADD TEAM-CONTAINER CLASS TO TEAMCONTAINERDIV */
 teamCardDiv.classList.add('team-card'); /*ADD TEAM-CARD CLASS TO TEAMCARDDIV */
@@ -81,8 +96,8 @@ cardImgDiv.classList.add('card-image');/*ADD CARD-IMAGE CLASS TO CARDIMGDIV */
 cardTextDiv.classList.add('card-text'); /*ADD CARD-TEXT CLASS TO CARDTEXTDIV */
 
 // cardTextDiv.append(testObj[i].name)
-cardTextDiv.append(employeesArr[i].name);/*APPENDO L'ELEMENTO H3 AL DIV CONTENITORE CARDTEXTDIV */
-cardTextDiv.append(employeesArr[i].profession);/*APPENDO L'ELEMENTO P AL DIV CONTENITORE CARDTEXTDIV */
+cardTextDiv.append(h3Js);/*APPENDO L'ELEMENTO H3 AL DIV CONTENITORE CARDTEXTDIV */
+cardTextDiv.append(pJs);/*APPENDO L'ELEMENTO P AL DIV CONTENITORE CARDTEXTDIV */
 cardImgDiv.append(imgJs); /*APPENDO L'IMMAGINE AL DIV CONTENITORE CARDIMG */
 teamCardDiv.append(cardImgDiv);/* APPENDO IL DIV CONTENITORE IMG AL DIV TEAM-CARD CONTENITORE */
 teamCardDiv.append(cardTextDiv)/*APPENDO IL DIV CARDTEXT AL DIV TEAMCARD CONTENITORE */
