@@ -12,38 +12,51 @@ Quando un pezzo di codice funziona, chiediamoci se possiamo scomporlo in funzion
 
 // CREARE GLI ELEMENTI COME IN ESEMPIO HTML E APPENDERLI AL DIV GIUSTO
 
-// let teamCardJs = document.querySelector('.team-card');
-let teamContainerJs = document.querySelector('.team-container');
-let teamCardJs = document.createElement('div');
-let cardImgJs = document.createElement ('div');
-let imgJs = document.createElement('img')
+
+let teamContainer = document.querySelector('.team-container');/*SELEZIONE TEAM-CONTAINER*/
+let teamContainerDiv = document.createElement('div');/*DIV TEAM-CONTAINER */
+let teamCardDiv = document.createElement('div');/*DIV TEAMCARD */
+let cardImgDiv = document.createElement('div');/*DIV CARD IMG */
+let imgJs = document.createElement('img'); /*IMG ELEMENT*/
 imgJs.src ='https://picsum.photos/400/429/';
+let cardTextDiv = document.createElement('div');
+let h3Js = document.createElement('h3');
+let pJs = document.createElement('p');
+pJs.innerHTML= 'profession';
+h3Js.innerHTML= 'name';
 
-// let  varTest = 
-// teamCardJs = varTest;
-teamContainerJs.append(imgJs);
+
+teamContainerDiv.classList.add('team-container'); /*ADD TEAM-CONTAINER CLASS TO TEAMCONTAINERDIV */
+teamCardDiv.classList.add('team-card'); /*ADD TEAM-CARD CLASS TO TEAMCARDDIV */
+cardImgDiv.classList.add('card-image');/*ADD CARD-IMAGE CLASS TO CARDIMGDIV */
+cardTextDiv.classList.add('card-text'); /*ADD CARD-TEXT CLASS TO CARDTEXTDIV */
 
 
+cardTextDiv.append(h3Js);/*APPENDO L'ELEMENTO H3 AL DIV CONTENITORE CARDTEXTDIV */
+cardTextDiv.append(pJs);/*APPENDO L'ELEMENTO P AL DIV CONTENITORE CARDTEXTDIV */
+cardImgDiv.append(imgJs); /*APPENDO L'IMMAGINE AL DIV CONTENITORE CARDIMG */
+teamCardDiv.append(cardImgDiv);/* APPENDO IL DIV CONTENITORE IMG AL DIV TEAM-CARD CONTENITORE */
+teamCardDiv.append(cardTextDiv)/*APPENDO IL DIV CARDTEXT AL DIV TEAMCARD CONTENITORE */
+teamContainer.append(teamCardDiv);/*APPENDO IL DIV TEAM-CARD A TEAM-CONTANIER SELEZIONATO */
 
-
-// let 
-
-// teamCardJs= 'ciao';
-// teamCardJs.innerHTML = varTest;
 
 /*
-<div class="team-card">
-    <div class="card-image">
-        <img
-        src="img/wayne-barnett-founder-ceo.jpg"
-        alt="Wayne Barnett"
-        />
-    </div>
-    <div class="card-text">
-        <h3>Wayne Barnett</h3>
-        <p>Founder & CEO</p>
-    </div>
-</div>
+<div class="team-container">
+          <!-- Inseriamo inizialmente una card statica per stilarla e vedere l'effetto finale -->
+
+          <div class="team-card">
+            <div class="card-image">
+              <img
+                src="img/wayne-barnett-founder-ceo.jpg"
+                alt="Wayne Barnett"
+              />
+            </div>
+            <div class="card-text">
+              <h3>Wayne Barnett</h3>
+              <p>Founder & CEO</p>
+            </div>
+          </div>
+        </div>
 */
 
 
