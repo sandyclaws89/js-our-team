@@ -12,51 +12,53 @@ Quando un pezzo di codice funziona, chiediamoci se possiamo scomporlo in funzion
 
 // CREARE GLI ELEMENTI COME IN ESEMPIO HTML E APPENDERLI AL DIV GIUSTO
 
-let testObj =[
+let employeesArr=[
     {
-    img:'/img/wayne-barnett-founder-ceo.jpg',
+    img:'.img/wayne-barnett-founder-ceo.jpg',
     name: 'Wayne Barnett',
     profession: 'Founder & CEO'
     },
     {
-    img:`img\wayne-barnett-founder-ceo.jpg`,
+    img:'.img/angela-caroll-chief-editor.jpg',
     name: 'Angela Caroll',
     profession: 'Chief Editor'
     },
     {
-    img:`img\wayne-arnett-founder-ceo.jpg`,
+    img:'.img/walter-gordon-office-manager.jpg',
     name: 'Walter Gordon',
     profession: 'Office Manager'
     },
     {
-    img:`img\wayne-barnett-founder-ceo.jpg`,
+    img:'.img/angela-lopez-social-media-manager.jpg',
     name: 'Angela Lopez',
     profession: 'Social Media Manager'
     },
     {
-    img:`img\wayne-barnett-founder-ceo.jpg`,
+    img:'.img/scott-estrada-developer.jpg',
     name: 'Scott Estrada',
     profession: 'Developer'
     },
     {
-    img:`img\wayne-barnett-founder-ceo.jpg`,
+    img:'.img/barbara-ramos-graphic-designer.jpg',
     name: 'Barbara Ramos',
     profession: 'Graphic Designer'
     },
 ];
-testObj.name
+// testObj.name
 
-// console.log(testObj.);
 // console.log(testObj[3].name)
-for(i=0; i<testObj.length; i++){
-    console.log(testObj.name)
-}
+// for(i=0; i<employeesArr.length; i++){
+//     console.log (employeesArr[i].name)
+//     console.log (employeesArr[i].profession)
+//     console.log(employeesArr[i].img)
+   
+// }
 
-for(let key in testObj){
-    console.log(testObj[key]);
-}
+// for(let key in testObj){
+//     console.log(testObj[key]);
+// }
 
-
+// (employeesArr[i].name)
 
 
 for(let i=0;i<6;i++){
@@ -65,8 +67,8 @@ let teamContainer = document.querySelector('.team-container');/*SELEZIONE TEAM-C
 let teamContainerDiv = document.createElement('div');/*DIV TEAM-CONTAINER */
 let teamCardDiv = document.createElement('div');/*DIV TEAMCARD */
 let cardImgDiv = document.createElement('div');/*DIV CARD IMG */
-let imgJs = document.createElement('img'); /*IMG ELEMENT*/
-imgJs.src ='https://picsum.photos/400/429/';
+let imgJs = employeesArr[i].img.innerHTML;  /*document.createElement('img'); /*IMG ELEMENT*/
+// imgJs.src =  employeesArr[i].img/*'img/wayne-barnett-founder-ceo.jpg'*/;
 let cardTextDiv = document.createElement('div');
 let h3Js = document.createElement('h3');
 let pJs = document.createElement('p');
@@ -79,8 +81,8 @@ cardImgDiv.classList.add('card-image');/*ADD CARD-IMAGE CLASS TO CARDIMGDIV */
 cardTextDiv.classList.add('card-text'); /*ADD CARD-TEXT CLASS TO CARDTEXTDIV */
 
 // cardTextDiv.append(testObj[i].name)
-cardTextDiv.append(testObj[i].name);/*APPENDO L'ELEMENTO H3 AL DIV CONTENITORE CARDTEXTDIV */
-cardTextDiv.append(testObj[i].profession);/*APPENDO L'ELEMENTO P AL DIV CONTENITORE CARDTEXTDIV */
+cardTextDiv.append(employeesArr[i].name);/*APPENDO L'ELEMENTO H3 AL DIV CONTENITORE CARDTEXTDIV */
+cardTextDiv.append(employeesArr[i].profession);/*APPENDO L'ELEMENTO P AL DIV CONTENITORE CARDTEXTDIV */
 cardImgDiv.append(imgJs); /*APPENDO L'IMMAGINE AL DIV CONTENITORE CARDIMG */
 teamCardDiv.append(cardImgDiv);/* APPENDO IL DIV CONTENITORE IMG AL DIV TEAM-CARD CONTENITORE */
 teamCardDiv.append(cardTextDiv)/*APPENDO IL DIV CARDTEXT AL DIV TEAMCARD CONTENITORE */
