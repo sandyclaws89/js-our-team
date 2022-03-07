@@ -13,6 +13,13 @@ Quando un pezzo di codice funziona, chiediamoci se possiamo scomporlo in funzion
 // CREARE GLI ELEMENTI COME IN ESEMPIO HTML E APPENDERLI AL DIV GIUSTO
 
 
+
+
+
+
+
+for(let i=0;i<6;i++){
+
 let teamContainer = document.querySelector('.team-container');/*SELEZIONE TEAM-CONTAINER*/
 let teamContainerDiv = document.createElement('div');/*DIV TEAM-CONTAINER */
 let teamCardDiv = document.createElement('div');/*DIV TEAMCARD */
@@ -24,7 +31,6 @@ let h3Js = document.createElement('h3');
 let pJs = document.createElement('p');
 pJs.innerHTML= 'profession';
 h3Js.innerHTML= 'name';
-
 
 teamContainerDiv.classList.add('team-container'); /*ADD TEAM-CONTAINER CLASS TO TEAMCONTAINERDIV */
 teamCardDiv.classList.add('team-card'); /*ADD TEAM-CARD CLASS TO TEAMCARDDIV */
@@ -38,6 +44,7 @@ cardImgDiv.append(imgJs); /*APPENDO L'IMMAGINE AL DIV CONTENITORE CARDIMG */
 teamCardDiv.append(cardImgDiv);/* APPENDO IL DIV CONTENITORE IMG AL DIV TEAM-CARD CONTENITORE */
 teamCardDiv.append(cardTextDiv)/*APPENDO IL DIV CARDTEXT AL DIV TEAMCARD CONTENITORE */
 teamContainer.append(teamCardDiv);/*APPENDO IL DIV TEAM-CARD A TEAM-CONTANIER SELEZIONATO */
+}
 
 
 /*
