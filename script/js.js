@@ -12,8 +12,49 @@ Quando un pezzo di codice funziona, chiediamoci se possiamo scomporlo in funzion
 
 // CREARE GLI ELEMENTI COME IN ESEMPIO HTML E APPENDERLI AL DIV GIUSTO
 
+let testObj =[
+    {
+    img:'/img/wayne-barnett-founder-ceo.jpg',
+    name: 'Wayne Barnett',
+    profession: 'Founder & CEO'
+    },
+    {
+    img:`img\wayne-barnett-founder-ceo.jpg`,
+    name: 'Angela Caroll',
+    profession: 'Chief Editor'
+    },
+    {
+    img:`img\wayne-arnett-founder-ceo.jpg`,
+    name: 'Walter Gordon',
+    profession: 'Office Manager'
+    },
+    {
+    img:`img\wayne-barnett-founder-ceo.jpg`,
+    name: 'Angela Lopez',
+    profession: 'Social Media Manager'
+    },
+    {
+    img:`img\wayne-barnett-founder-ceo.jpg`,
+    name: 'Scott Estrada',
+    profession: 'Developer'
+    },
+    {
+    img:`img\wayne-barnett-founder-ceo.jpg`,
+    name: 'Barbara Ramos',
+    profession: 'Graphic Designer'
+    },
+];
+testObj.name
 
+// console.log(testObj.);
+// console.log(testObj[3].name)
+for(i=0; i<testObj.length; i++){
+    console.log(testObj.name)
+}
 
+for(let key in testObj){
+    console.log(testObj[key]);
+}
 
 
 
@@ -37,9 +78,9 @@ teamCardDiv.classList.add('team-card'); /*ADD TEAM-CARD CLASS TO TEAMCARDDIV */
 cardImgDiv.classList.add('card-image');/*ADD CARD-IMAGE CLASS TO CARDIMGDIV */
 cardTextDiv.classList.add('card-text'); /*ADD CARD-TEXT CLASS TO CARDTEXTDIV */
 
-
-cardTextDiv.append(h3Js);/*APPENDO L'ELEMENTO H3 AL DIV CONTENITORE CARDTEXTDIV */
-cardTextDiv.append(pJs);/*APPENDO L'ELEMENTO P AL DIV CONTENITORE CARDTEXTDIV */
+// cardTextDiv.append(testObj[i].name)
+cardTextDiv.append(testObj[i].name);/*APPENDO L'ELEMENTO H3 AL DIV CONTENITORE CARDTEXTDIV */
+cardTextDiv.append(testObj[i].profession);/*APPENDO L'ELEMENTO P AL DIV CONTENITORE CARDTEXTDIV */
 cardImgDiv.append(imgJs); /*APPENDO L'IMMAGINE AL DIV CONTENITORE CARDIMG */
 teamCardDiv.append(cardImgDiv);/* APPENDO IL DIV CONTENITORE IMG AL DIV TEAM-CARD CONTENITORE */
 teamCardDiv.append(cardTextDiv)/*APPENDO IL DIV CARDTEXT AL DIV TEAMCARD CONTENITORE */
