@@ -8,3 +8,42 @@ Ragioniamo come sempre a step.
 Prima la logica in italiano e poi traduciamo in codice.
 console.log() è nostro amico.
 Quando un pezzo di codice funziona, chiediamoci se possiamo scomporlo in funzioni più piccole.*/
+
+
+// CREARE GLI ELEMENTI COME IN ESEMPIO HTML E APPENDERLI AL DIV GIUSTO
+
+// let teamCardJs = document.querySelector('.team-card');
+let teamContainerJs = document.querySelector('.team-container');
+let teamCardJs = document.createElement('div');
+let cardImgJs = document.createElement ('div');
+let imgJs = document.createElement('img')
+imgJs.src ='https://picsum.photos/400/429/';
+
+// let  varTest = 
+// teamCardJs = varTest;
+teamContainerJs.append(imgJs);
+
+
+
+
+// let 
+
+// teamCardJs= 'ciao';
+// teamCardJs.innerHTML = varTest;
+
+/*
+<div class="team-card">
+    <div class="card-image">
+        <img
+        src="img/wayne-barnett-founder-ceo.jpg"
+        alt="Wayne Barnett"
+        />
+    </div>
+    <div class="card-text">
+        <h3>Wayne Barnett</h3>
+        <p>Founder & CEO</p>
+    </div>
+</div>
+*/
+
+
