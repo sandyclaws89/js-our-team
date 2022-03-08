@@ -14,32 +14,32 @@ Quando un pezzo di codice funziona, chiediamoci se possiamo scomporlo in funzion
 
 let employeesArr=[
     {
-    img:'.img/wayne-barnett-founder-ceo.jpg',
+    img:'img/wayne-barnett-founder-ceo.jpg',
     name: 'Wayne Barnett',
     profession: 'Founder & CEO'
     },
     {
-    img:'.img/angela-caroll-chief-editor.jpg',
+    img:'img/angela-caroll-chief-editor.jpg',
     name: 'Angela Caroll',
     profession: 'Chief Editor'
     },
     {
-    img:'.img/walter-gordon-office-manager.jpg',
+    img:'img/walter-gordon-office-manager.jpg',
     name: 'Walter Gordon',
     profession: 'Office Manager'
     },
     {
-    img:'.img/angela-lopez-social-media-manager.jpg',
+    img:'img/angela-lopez-social-media-manager.jpg',
     name: 'Angela Lopez',
     profession: 'Social Media Manager'
     },
     {
-    img:'.img/scott-estrada-developer.jpg',
+    img:'img/scott-estrada-developer.jpg',
     name: 'Scott Estrada',
     profession: 'Developer'
     },
     {
-    img:'.img/barbara-ramos-graphic-designer.jpg',
+    img:'img/barbara-ramos-graphic-designer.jpg',
     name: 'Barbara Ramos',
     profession: 'Graphic Designer'
     },
@@ -87,7 +87,7 @@ h3Js.innerHTML = employeesArr[i].name;
 let pJs = document.createElement('p');
 pJs.innerHTML= employeesArr[i].profession;
 let imgJs = document.createElement('img');
-imgJs.innerHTML = employeesArr[i].img;
+imgJs.src = employeesArr[i].img;
 // h3Js.innerHTML= 'name';
 
 teamContainerDiv.classList.add('team-container'); /*ADD TEAM-CONTAINER CLASS TO TEAMCONTAINERDIV */
